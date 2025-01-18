@@ -1,0 +1,104 @@
+/* ================================= GENERAL STYLES =================================*/
+:root {
+    --color-primary: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ================================= SIDEBAR =================================*/
+.header__container {
+    background-color: #38858A;
+}
+
+.container__sidebar {
+    font-size: 1.7rem;
+    color: var(--color-primary);
+}
+
+.sidebar__list {
+    display: flex;
+    list-style: none;
+}
+
+.list__item {
+    padding: 1rem;
+}
+
+.list__item:hover {
+    background-color: #222;
+}
+
+.item__link {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+
+
+/* ================================= SLIDER =================================*/
+.container__slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0 1rem;
+    max-width: 95%;
+    width: 100rem;
+    margin: 2vw auto;
+}
+
+.slider__item {
+    padding-bottom: 1.5rem;
+}
+
+.slider__container--image {
+    height: 18rem;
+}
+
+.slider__link{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider__image {
+    transition: transform 300ms linear;
+}
+
+.slider__link:hover .slider__image {
+    transform: scale(1.1);
+}
+
+.slider__title {
+    font-size: 1.6rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+}
