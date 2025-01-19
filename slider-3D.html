@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/css/slider-3D.css">
+
+    <title>Slider 3D</title>
+</head>
+<body>
+    <header class="header__container">
+        <nav class="container__sidebar">
+            <ul class="sidebar__list">
+                <li class="list__item">
+                    <a href="./index.html" class="item__link">Home</a>
+                </li>
+                <li class="list__item">
+                    <a href="./slider.html" class="item__link">Slider</a>
+                </li>
+                <li class="list__item">
+                    <a href="./slider-3D.html" class="item__link">Slider 3D</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main__container">
+        <div class="container__slider">
+            <div class="slider__item"><img src="./assets/image/Gears_Of_War_Cover.webp" alt="Gears of War"></div>
+            <div class="slider__item"><img src="./assets/image/Gears_Of_War_2_Cover.webp" alt="Gears of War 2"></div>
+            <div class="slider__item"><img src="./assets/image/Gears_Of_War_3_Cover.webp" alt="Gears of War 3"></div>
+            <div class="slider__item"><img src="./assets/image/Gears_Of_War_Judgment_Cover.webp" alt="Gears of War Judgment"></div>
+            <div class="slider__item"><img src="./assets/image/Gears-Of-War-4-Cover.jpg" alt="Gears of War 4"></div>
+            <div class="slider__item"><img src="./assets/image/Gears_Of_War_5_Cover.jpg" alt="Gears of War 5"></div>
+        </div>
+    
+        <div class="container__button">
+            <span class="button__prev"></span>
+            <span class="button__next"></span>
+        </div>
+    </main>
+
+    <script>
+        let prev = document.querySelector('.button__prev');
+        let next = document.querySelector('.button__next');
+
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.slider__item');
+            document.querySelector('.container__slider').appendChild(items[0]);
+        })
+        
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.slider__item');
+            document.querySelector('.container__slider').prepend(items[items.length - 1]);
+        })
+    </script>
+</body>
+</html>

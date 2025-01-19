@@ -46,17 +46,16 @@ img {
     list-style: none;
 }
 
-.list__item {
-    padding: 1rem;
-}
-
-.list__item:hover {
-    background-color: #222;
-}
-
 .item__link {
+    display: inline-block;
+    padding: 1rem;
     text-decoration: none;
     color: var(--color-primary);
+
+}
+
+.item__link:hover {
+    background-color: #222;
 }
 
 
