@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/expandable-slider.css">
+
+    <title>Explandable Slider</title>
+</head>
+
+<body>
+    <header class="header__container">
+        <nav class="container__sidebar">
+            <ul class="sidebar__list">
+                <li class="list__item">
+                    <a href="./index.html" class="item__link">Home</a>
+                </li>
+                <li class="list__item">
+                    <a href="./slider.html" class="item__link">Slider</a>
+                </li>
+                <li class="list__item">
+                    <a href="./slider-3D.html" class="item__link">Slider 3D</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main__container">
+        <div class="container__slider">
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_Cover.webp')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 01</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_2_Cover.webp')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 02</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_3_Cover.webp')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 03</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_Judgment_Cover.webp')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 04</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_4_Cover.jpg')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 05</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+            <div class="slider__item" style="--img: url('../image/Gears_Of_War_5_Cover.jpg')">
+                <div class="slider__content">
+                    <h2 class="slider__title">Slide 06</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tenetur eum commodi ab porro
+                        dolore?</p>
+                </div>
+            </div>
+        </div>
+        <div class="container__button">
+            <span class="button__span prev"></span>
+            <span class="button__span next"></span>
+        </div>
+    </main>
+    <script>
+        let nextButton = document.querySelector('.next');
+        let prevButton = document.querySelector('.prev');
+        let slider = document.querySelector('.container__slider');
+
+        nextButton.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slider__item');
+            slider.appendChild(slides[0]);
+        });
+
+        prevButton.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slider__item');
+            slider.prepend(slides[slides.length - 1]);
+        });
+    </script>
+</body>
+
+</html>
