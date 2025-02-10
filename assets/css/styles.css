@@ -64,7 +64,7 @@ img {
 /* ================================= SLIDER =================================*/
 .container__slider {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0 1rem;
     max-width: 95%;
     width: 100rem;
