@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/css/rectangle-3D-slider.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header__container">
+    <nav class="container__sidebar">
+      <ul class="sidebar__list">
+        <li class="list__item">
+          <a href="./index.html" class="item__link">Home</a>
+        </li>
+        <li class="list__item">
+          <a href="./slider.html" class="item__link">Slider</a>
+        </li>
+        <li class="list__item">
+          <a href="./slider-3D.html" class="item__link">Slider 3D</a>
+        </li>
+        <li class="list__item">
+          <a href="./expandable-slider.html" class="item__link">Expandable Slider</a>
+        </li>
+        <li class="list__item">
+          <a href="./rectangle-3D-slider.html" class="item__link">Rectangle 3D Slider</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="box">
+        <div class="card" style="--i: 1;">
+          <div class="imgBx"><img src="./assets/image/Gears-Of-War-Cover.webp" alt="Gears of War"></div>
+          <h2>Gears 1</h2>
+        </div>
+        <div class="card" style="--i: 2;">
+          <div class="imgBx"><img src="./assets/image/Gears-Of-War-2-Cover.webp" alt="Gears of War 2"></div>
+          <h2>Gears 2</h2>
+        </div>
+        <div class="card" style="--i: 3;">
+          <div class="imgBx"><img src="./assets/image/Gears-Of-War-3-Cover.webp" alt="Gears of War 3"></div>
+          <h2>Gears 3</h2>
+        </div>
+        <div class="card" style="--i: 4;">
+          <div class="imgBx"><img src="./assets/image/Gears-Of-War-Judgment-Cover.webp" alt="Gears of War Judgment"></div>
+          <h2>Gears Judgment</h2>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <button class="prev"></button>
+      <button class="next"></button>
+    </div>
+  </main>
+
+  <script>
+    let prev = document.querySelector('.prev');
+    let next = document.querySelector('.next');
+    let box = document.querySelector('.box');
+    let degree = 0;
+
+    prev.addEventListener('click', function () {
+      degree += 90;
+      box.style = `transform: perspective(1000px) rotateY(${degree}deg);`;
+    });
+
+    next.addEventListener('click', function () {
+      degree -= 90;
+      box.style = `transform: perspective(1000px) rotateY(${degree}deg);`;
+    });
+  </script>
+</body>
+
+</html>

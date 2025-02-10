@@ -1,6 +1,7 @@
 /* ================================= GENERAL STYLES =================================*/
 :root {
     --color-primary: #fff;
+    --navbar-color: #38858a;
 }
 
 * {
@@ -22,7 +23,7 @@ body {
 
 /* ================================= SIDEBAR =================================*/
 .header__container {
-    background-color: #38858A;
+    background-color: var(--navbar-color);
 }
 
 .container__sidebar {

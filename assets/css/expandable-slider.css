@@ -1,6 +1,7 @@
 /* ================================= GENERAL STYLES =================================*/
 :root {
     --color-primary: #fff;
+    --navbar-color: #38858a;
 }
 
 * {
@@ -24,16 +25,10 @@ body {
     background-color: var(--color-primary);
 }
 
-/* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 
 /* ================================= SIDEBAR =================================*/
 .header__container {
-    background-color: #38858A;
+    background-color: var(--navbar-color);
 }
 
 .container__sidebar {
